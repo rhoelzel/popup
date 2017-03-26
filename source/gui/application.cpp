@@ -14,7 +14,6 @@ extern "C"
   void set_python_callback(void(*python_callback)(int,int))
   {
     python_callback_=python_callback;
-    std::cout<<(void *)(python_callback)<<std::endl;
   }
   
   void window_close_callback(GLFWwindow* w)
