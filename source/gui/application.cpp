@@ -6,7 +6,7 @@ extern "C"
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wmissing-prototypes"  
-#pragma clang diagnostic ignored "-Wunused-parameter"
+#pragma GCC diagnostic ignored "-Wunused-parameter"
 #pragma clang diagnostic ignored "-Wmissing-variable-declarations"
 #pragma clang diagnostic ignored "-Wold-style-cast"
   void(*python_callback_)(int,int)=NULL;
@@ -44,7 +44,8 @@ extern "C"
   {
     std::cout<<"Scrolling!"<<std::endl;
   }
-  
+
+#pragma GCC diagnostic pop  
 #pragma clang diagnostic pop  
 } /* end extern "C" block */
 
